@@ -1,0 +1,45 @@
+# ============================================================
+# HireSense AI - Python Dependencies
+# ============================================================
+# Install with: pip install -r requirements.txt
+# ============================================================
+
+# --- Frontend / UI ---
+streamlit==1.38.0
+
+# --- Data Handling ---
+pandas==2.2.2
+numpy==1.26.4
+
+# --- Machine Learning ---
+scikit-learn==1.5.1
+joblib==1.4.2
+
+# --- NLP / Embeddings ---
+# NOTE: sentence-transformers depends on torch. The line below forces
+# the lightweight CPU-only build of torch (a few hundred MB) instead
+# of the default CUDA/GPU build (which can be 2GB+ and fails to
+# install on machines with limited disk space or no GPU). This is
+# safe on Windows/Mac/Linux even without a GPU.
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch
+sentence-transformers==3.0.1
+
+# --- Vector Database ---
+faiss-cpu==1.8.0
+
+# --- LLM (Groq) ---
+groq==0.9.0
+
+# --- PDF Parsing ---
+PyPDF2==3.0.1
+pdfplumber==0.11.4
+
+# --- Visualization ---
+matplotlib==3.9.1.post1
+
+# --- Environment Variables ---
+python-dotenv==1.0.1
+
+# --- Misc utilities ---
+regex==2024.7.24
